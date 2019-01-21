@@ -27,6 +27,7 @@ Route::group(['middleware' => 'usuarioAdmin'], function () {
 
 	//para hacer un grupo de rutas de recursos con las peticiones index,update,edit,cretae,etc
 	Route::resource('clinica/medico','MedicoController');
+	Route::resource('Rem/articulo','ArticuloController');
 
     
 	//Route::resource('clinica','IndiceController');
