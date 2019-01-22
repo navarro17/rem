@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
                 <label for="torreTipo">Tipo de Torre</label>
-                <input type="text" name="resultado" class="form-control" placeholder="Tipo de Torre...">  
+                <input type="text" name="torreTipo" class="form-control" placeholder="Tipo de Torre...">  
                   
             </div>
             <div class="form-group">
