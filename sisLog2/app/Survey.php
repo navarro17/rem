@@ -15,12 +15,16 @@ class Survey extends Model
 
     protected $fillable = [
     
-    	'coordinadas',
+    	'coordenadas',
     	'tipoSitio',
     	'acceso',
     	'shelter',
         'torreTipo',
         'areasAdyacentes',
+        'montaje',
+        'altura',
+        'numeroLineas',
+        'tipoLinea',
         'fechaSurvey',
         'horaSurvey'
         

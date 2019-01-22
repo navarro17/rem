@@ -17,38 +17,60 @@
             {{Form::token()}}
 
         
-
             <div class="form-group">
-                <label for="coordenadas" class="required">Coordenadas</label>
-                <textarea name="coordenadas" value="{{old('coordenadas')}}"  rows="2.5" cols="20" name="coordenadas" class="form-control" >    
-                </textarea>
+                <label for="coordenadas">Coordenadas</label>
+                <input type="text" name="coordenadas" class="form-control" placeholder="Coordenadas...">  
+                  
+            </div>
+            <div class="form-group">
+                <label for="tipoSitio">Tipo de Sitio</label>
+                <input type="text" name="tipoSitio" class="form-control" placeholder="Tipo de Sitio...">  
+                  
             </div>
              <div class="form-group">
-                <label for="tipoSitio" class="required">Tipo de Sitio</label>
-                <textarea name="tipoSitio" value="{{old('tipoSitio')}}"  rows="2.5" cols="20" name="tipoSitio" class="form-control" >    
-                </textarea>
+                <label for="acceso">Acceso</label>
+                <input type="text" name="acceso" class="form-control" placeholder="Acceso...">  
+                  
             </div>
             <div class="form-group">
-                <label for="acceso" class="required">Acceso</label>
-                <textarea name="acceso" value="{{old('acceso')}}"  rows="2.5" cols="20" name="acceso" class="form-control" >    
-                </textarea>
+                <label for="shelter">Shelter</label>
+                <input type="text" name="shelter" class="form-control" placeholder="Shelter...">  
+                  
             </div>
             <div class="form-group">
-                <label for="shelter" class="required">Shelter</label>
-                <textarea name="shelter" value="{{old('shelter')}}"  rows="2.5" cols="20" name="shelter" class="form-control" >    
-                </textarea>
+                <label for="torreTipo">Tipo de Torre</label>
+                <input type="text" name="resultado" class="form-control" placeholder="Tipo de Torre...">  
+                  
             </div>
             <div class="form-group">
-                <label for="torreTipo" class="required">Tipo de Torre</label>
-                <textarea name="torreTipo" value="{{old('torreTipo')}}"  rows="2.5" cols="20" name="torreTipo" class="form-control" >    
-                </textarea>
+                <label for="areasAdyacentes">Areas Adyacentes</label>
+                <input type="text" name="areasAdyacentes" class="form-control" placeholder="Areas Adyacentes...">  
+                  
             </div>
             <div class="form-group">
-                <label for="areasAdyacentes" class="required">Areas Adyacentes</label>
-                <textarea name="areasAdyacentes" value="{{old('areasAdyacentes')}}"  rows="2.5" cols="20" name="areasAdyacentes" class="form-control" >   
-                </textarea>
+                <label for="montaje">Montaje</label>
+                <input type="text" name="montaje" class="form-control" placeholder="Montaje...">  
+                  
             </div>
-             
+             <div class="form-group">
+                <label for="altura">Altura</label>
+                <input type="text" name="altura" class="form-control" placeholder="Altura en metros...">  
+                  
+            </div>
+            
+            <div class="form-group">
+                <label for="numeroLineas">Numero de Lineas</label>
+                
+                    <input type="number" name="numeroLineas" min="0" max="150" step="1" value="">
+                
+            </div>
+            <div class="form-group">
+                <label for="tipoLinea">Tipo de Linea</label>
+                <input type="text" name="tipoLinea" class="form-control" placeholder="Tipo de Linea...">  
+                  
+            </div>
+            
+
               <div class="form-group">
                 <label for="fechaSurvey">Fecha de Survey</label>
                 <input type="text" name="fechaSurvey" class="form-control" value="{{$now->format('d/m/Y')}}"> 

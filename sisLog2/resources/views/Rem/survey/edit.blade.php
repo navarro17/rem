@@ -17,38 +17,50 @@
 
             {{Form::token()}}
 
-    		
+    		<div class="form-group">
+                <label for="coordenadas">Coordenadas</label>
+                <input type="text" name="coordenadas" class="form-control" value="{{$survey->coordenadas}}"> 
+            </div>
             
             <div class="form-group">
-                        <label for="coordenadas" class="required">Coordenadas</label>
-                        <textarea name="coordenadas" value="{{$survey->coordenadas}}"  rows="2.5" cols="20" name="coordenadas" class="form-control">{{$survey->coordenadas}}    
-                        </textarea>
-                    </div>
+                <label for="tipoSitio">Tipo de Sitio</label>
+                <input type="text" name="tipoSitio" class="form-control" value="{{$survey->tipoSitio}}"> 
+            </div>
             <div class="form-group">
-                        <label for="tipoSitio" class="required">Tipo de SitiotipoSitio</label>
-                        <textarea name="tipoSitio" value="{{$survey->tipoSitio}}"  rows="2.5" cols="20" name="tipoSitio" class="form-control">{{$survey->tipoSitio}}    
-                        </textarea>
-                    </div>
+                <label for="acceso">Acceso</label>
+                <input type="text" name="acceso" class="form-control" value="{{$survey->acceso}}"> 
+            </div>
             <div class="form-group">
-                        <label for="acceso" class="required">Acceso</label>
-                        <textarea name="acceso" value="{{$survey->acceso}}"  rows="2.5" cols="20" name="acceso" class="form-control">{{$survey->acceso}}    
-                        </textarea>
-                    </div>
+                <label for="shelter">Shelter</label>
+                <input type="text" name="shelter" class="form-control" value="{{$survey->shelter}}"> 
+            </div>
             <div class="form-group">
-                        <label for="shelter" class="required">Shelter</label>
-                        <textarea name="shelter" value="{{$survey->shelter}}"  rows="2.5" cols="20" name="shelter" class="form-control">{{$survey->shelter}}    
-                        </textarea>
-                    </div>
+                <label for="torreTipo">Tipo de Torre</label>
+                <input type="text" name="torreTipo" class="form-control" value="{{$survey->torreTipo}}"> 
+            </div>
             <div class="form-group">
-                        <label for="torreTipo" class="required">Tipo de Torre</label>
-                        <textarea name="torreTipo" value="{{$survey->torreTipo}}"  rows="2.5" cols="20" name="torreTipo" class="form-control">{{$survey->torreTipo}}    
-                        </textarea>
-                    </div>
+                <label for="areasAdyacentes">Areas Adyacentes</label>
+                <input type="text" name="areasAdyacentes" class="form-control" value="{{$survey->areasAdyacentes}}"> 
+            </div>
             <div class="form-group">
-                        <label for="areasAdyacentes" class="required">Areas Adyacentes</label>
-                        <textarea name="areasAdyacentes" value="{{$survey->areasAdyacentes}}"  rows="2.5" cols="20" name="areasAdyacentes" class="form-control">{{$survey->areasAdyacentes}}    
-                        </textarea>
-                    </div>
+                <label for="montaje">Montaje</label>
+                <input type="text" name="montaje" class="form-control" value="{{$survey->montaje}}"> 
+            </div>
+              
+            <div class="form-group">
+                <label for="altura">Altura</label>
+                <input type="text" name="altura" class="form-control" value="{{$survey->altura}}"> 
+            </div>
+            
+            <div class="form-group">
+                <label for="numeroLineas">Numero de Lineas </label>
+                    <input type="number" name="numeroLineas" min="0" max="150" step="1" value="{{$survey->numeroLineas}}">
+                </div>
+            <div class="form-group">
+                <label for="tipoLinea">Tipo de Linea</label>
+                <input type="text" name="tipoLinea" class="form-control" value="{{$survey->tipoLinea}}"> 
+            </div>
+                
              
             <div class="form-group">
                 <label for="fechaSurvey">Fecha de Survey</label>

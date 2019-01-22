@@ -56,6 +56,10 @@ class SurveyController extends Controller
         $survey->shelter=$request->get('shelter');
         $survey->torreTipo=$request->get('torreTipo');
         $survey->areasAdyacentes=$request->get('areasAdyacentes');
+        $survey->montaje=$request->get('montaje');
+        $survey->altura=$request->get('altura');
+        $survey->numeroLineas=$request->get('numeroLineas');
+        $survey->tipoLinea=$request->get('tipoLinea');
         $survey->fechaSurvey=$request->get('fechaSurvey');
         $survey->horaSurvey=$request->get('horaSurvey');
         if($survey->save()){
@@ -99,6 +103,10 @@ class SurveyController extends Controller
         $survey->shelter=$request->get('shelter');
         $survey->torreTipo=$request->get('torreTipo');
         $survey->areasAdyacentes=$request->get('areasAdyacentes');
+        $survey->montaje=$request->get('montaje');
+        $survey->altura=$request->get('altura');
+        $survey->numeroLineas=$request->get('numeroLineas');
+        $survey->tipoLinea=$request->get('tipoLinea');
         $survey->fechaSurvey=$request->get('fechaSurvey');
         $survey->horaSurvey=$request->get('horaSurvey');
         if($survey->update()){

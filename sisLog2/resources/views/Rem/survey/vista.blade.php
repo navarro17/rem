@@ -65,6 +65,18 @@ body {
             <td class="Estilo9"><div align="left">Areas Adyacentes:</div></td>
             <td class="Estilo9"><div align="left">{{$survey->areasAdyacentes}}</div></td>
             </tr>
+            <tr>
+            <td class="Estilo9"><div align="left">Montaje:</div></td>
+            <td class="Estilo9"><div align="left">{{$survey->montaje}}</div></td>
+            </tr>
+            <tr>
+            <td class="Estilo9"><div align="left">Altura:</div></td>
+            <td class="Estilo9"><div align="left">{{$survey->altura}}</div></td>
+            </tr>
+            <tr>
+            <td class="Estilo9"><div align="left">Numero de Lineas:</div></td>
+            <td class="Estilo9"><div align="left">{{$survey->numeroLineas}}</div></td>
+            </tr>
           <tr>
             <td class="Estilo9"><div align="left">fecha de Survey:</div></td>
             <td class="Estilo9"><div align="left">{{$survey->fechaSurvey}}</div></td>

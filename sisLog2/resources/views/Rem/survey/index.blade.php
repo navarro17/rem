@@ -21,6 +21,7 @@
                         <th>Acceso</th>
                         <th>Shelter</th>
                         <th>Torre Tipo</th>
+                        <th>Tipo de Linea</th>
                         <th>Fecha de Survey</th>
                         <th>Hora de Survey</th>
                         <th>Opciones</th>
@@ -33,6 +34,7 @@
                         <td>{{ $surv->acceso}}</td>
                         <td>{{ $surv->shelter}}</td>
                         <td>{{ $surv->torreTipo}}</td>
+                        <td>{{ $surv->tipoLinea}}</td>
                         <td>{{ $surv->fechaSurvey}}</td>
                         <td>{{ $surv->horaSurvey}}</td>
                         <td>

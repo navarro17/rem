@@ -28,9 +28,13 @@ class SurveyFormRequest extends Request
             'coordenadas' => 'required|max:100',
             'tipoSitio'=>'required|max:100',
             'acceso'=>'required|max:100',
-            'shelter'=>'required|max:600',
+            'shelter'=>'required|max:100',
             'torreTipo'=>'required|max:100',
             'areasAdyacentes'=>'required|max:100',
+            'montaje'=>'required|max:100',
+            'altura'=>'required|max:100',
+            'numeroLineas'=>'required|max:100',
+            'tipoLinea'=>'required|max:100',
             'fechaSurvey' =>'required|max:30',
             'horaSurvey' =>'required|max:30'
             
