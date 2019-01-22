@@ -26,10 +26,10 @@
 					<td>{{ $usu->email}}</td>
 					<td>
 					<?php if(($usu->tipoUsuario)==1){
-						echo "Administrador";
+						echo "Tecnico";
 						}
 						else{
-							echo "Doctor";
+							echo "Bodeguero";
 							} ?>
 
 
