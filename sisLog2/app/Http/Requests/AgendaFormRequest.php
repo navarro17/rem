@@ -4,7 +4,7 @@ namespace sisLog2\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CitaFormRequest extends FormRequest
+class AgendaFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,12 @@ class CitaFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombrePaciente' => 'required|max:50',
-            'nombreMedico' => 'required|max:50',
-            'descripcion' => 'required,max:150',
-            'fechaCita' => 'required',
-            'horaCita' => 'required',
-            'reservacionCita'=>'required',
+            'nombreEmpresa' => 'required|max:100',
+            'tipoServicio' => 'required|max:100',
+            'descripcionServicio' => 'required|max:150',
+            'fechaServicio' => 'required|max:75',
+            'horaServicio' => 'required|max:75',
+            'reservacionAgenda'=>'required',
             
         ];
     }

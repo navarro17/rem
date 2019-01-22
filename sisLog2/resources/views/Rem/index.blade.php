@@ -18,6 +18,14 @@
             <center><h3>Gestion de Surveys</h3></center><br><center><a href="Rem/survey"><button class="btn btn-success">Entrar</button></a></center>
         </div>
         </div>
+        <div class="col-lg-4">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <center>
+            <img src="{{asset('img/agenda.png')}}" alt="Generic placeholder image" width="140" height="140">
+            </center>
+            <center><h3>Agenda de Servicios</h3></center><br><center><a href="Rem/agenda"><button class="btn btn-success">Entrar</button></a></center>
+        </div>
+        </div>
     </div>
     <br>
     <div class="row">
