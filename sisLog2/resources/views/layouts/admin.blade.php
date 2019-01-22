@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rem Redes Mobiles</title>
+    <title>Rem Redes Moviles</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -31,7 +31,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>REM</b></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Rem Redes Mobiles</b></span>
+          <span class="logo-lg"><b>Rem Redes Moviles</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -57,7 +57,7 @@
                     
                     <p>
                       {{ Auth::user()->email }}
-                      <small>Redes Mobiles</small>
+                      <small>Redes Moviles</small>
                       <small>TPI115</small>
                     </p>
                   </li>
@@ -87,17 +87,19 @@
           <ul class="sidebar-menu">
             <li class="header"></li>
             
+
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-th"></i>
                 <span>Survey</span>
-                <i class="fa fa-angle-left pull-right"></i>
+                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{url('Rem/Survey')}}"><i class="fa fa-circle-o"></i>Listado Survey</a></li>
-                <!--<li><a href="#"><i class="fa fa-circle-o"></i> Registro de Medico</a></li>-->
+                <li><a href="{{  url('Rem/survey') }} "><i class="fa fa-circle-o"></i>Listado de Surveys</a></li>
+                <li><a href=" {{ url('Rem/survey/create') }} "><i class="fa fa-circle-o"></i>Crear Survey</a></li>
               </ul>
             </li>
+           
             
             <!--<li class="treeview">
               <a href="#">
@@ -180,7 +182,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de Gestion de Procedimientos de Rem Redes Mobiles</h3>
+                  <h3 class="box-title">Sistema de Gestion de Procedimientos de Rem Redes Moviles e Infraestructura</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     

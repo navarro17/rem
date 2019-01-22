@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rem Redes Mobiles</title>
+    <title>Rem Redes Moviles</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -27,9 +27,9 @@
         <!-- Logo -->
         <a href="{{url('home')}}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>REM</b>B</span>
+          <span class="logo-mini"><b>REM</b></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Rem Redes Mobiles</b></span>
+          <span class="logo-lg"><b>Rem Redes Moviles</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -55,7 +55,7 @@
                     
                     <p>
                       {{ Auth::user()->email }}
-                      <small>Redes Mobiles</small>
+                      <small>Redes Moviles</small>
                       <small>TPI115</small>
                     </p>
                   </li>
@@ -164,7 +164,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de Gestion de Procedimientos de Rem Redes Mobiles</h3>
+                  <h3 class="box-title">Sistema de Gestion de Procedimientos de Rem Redes Moviles e Infraestructura</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     
