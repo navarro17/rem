@@ -15,15 +15,14 @@ class Articulo extends Model
 
     protected $fillable = [
     
-    	'altura',
+    	
     	'cantidad',
     	'modelo',
-    	'dimensiones',
+    	
         'fabricante',
-        'tipo',
-        'montaje',
-        'numLineas',
-        'tipoLinea'
+        'tipoArticulo',
+        
+        'descripcion'
         
         
     ];

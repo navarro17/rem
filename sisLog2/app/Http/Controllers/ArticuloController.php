@@ -24,13 +24,13 @@ class ArticuloController extends Controller
             $query=trim($request->get('searchText'));
             $articulo=DB::table('articulo')->where('modelo','LIKE','%'.$query.'%')
             ->orWhere('idArticulo','LIKE','%'.$query.'%')
-            ->orWhere('altura','LIKE','%'.$query.'%')
-            ->orWhere('dimensiones','LIKE','%'.$query.'%')
+            
+            
             ->orWhere('fabricante','LIKE','%'.$query.'%')
             ->orWhere('tipoArticulo','LIKE','%'.$query.'%')
-            ->orWhere('montaje','LIKE','%'.$query.'%')
-            ->orWhere('numLineas','LIKE','%'.$query.'%')
-            ->orWhere('tipoLinea','LIKE','%'.$query.'%')
+           
+            ->orWhere('descripcion','LIKE','%'.$query.'%')
+            
             ->orderBy('idArticulo','desc')
             ->paginate(7);
             return view('Rem.articulo.index',["articulo"=>$articulo,"searchText"=>$query]);
@@ -50,15 +50,14 @@ class ArticuloController extends Controller
     public function store(ArticuloFormRequest $request)
     {
     	$articulo = new Articulo;
-    	$articulo->altura=$request->get('altura');
+    	
         $articulo->cantidad=$request->get('cantidad');
         $articulo->modelo=$request->get('modelo');
-        $articulo->dimensiones=$request->get('dimensiones');
+        
         $articulo->fabricante=$request->get('fabricante');
         $articulo->tipoArticulo=$request->get('tipoArticulo');
-        $articulo->numLineas=$request->get('numLineas');
-        $articulo->montaje=$request->get('montaje');
-        $articulo->tipoLinea=$request->get('tipoLinea');
+        $articulo->descripcion=$request->get('descripcion');
+       
         if($articulo->save()){
 
             return back()->with('msj','Datos Guardados');
@@ -94,15 +93,15 @@ class ArticuloController extends Controller
     public function update(ArticuloFormRequest $request,$id)
     {
     	$articulo=Articulo::findOrFail($id);
-        $articulo->altura=$request->get('altura');
+        
         $articulo->cantidad=$request->get('cantidad');
         $articulo->modelo=$request->get('modelo');
-        $articulo->dimensiones=$request->get('dimensiones');
+       
         $articulo->fabricante=$request->get('fabricante');
         $articulo->tipoArticulo=$request->get('tipoArticulo');
-        $articulo->numLineas=$request->get('numLineas');
-        $articulo->montaje=$request->get('montaje');
-        $articulo->tipoLinea=$request->get('tipoLinea');
+       
+        $articulo->descripcion=$request->get('descripcion');
+        
         if($articulo->update()){
 
             return back()->with('msj','Datos Guardados');

@@ -20,8 +20,8 @@
     		
             
             <div class="form-group">
-                <label for="altura">Altura</label>
-                <input type="text" name="altura" class="form-control" value="{{$articulo->altura}}" placeholder="Altura...">  
+                <label for="tipoArticulo">Nombre</label>
+                <input type="text" name="tipoArticulo" class="form-control" value="{{$articulo->tipoArticulo}}" placeholder="nombre del articulo...">  
             </div>
             <div class="form-group">
                 <label for="cantidad">Cantidad</label>
@@ -32,36 +32,20 @@
                         <textarea name="modelo" value="{{$articulo->modelo}}"  rows="2.5" cols="20" name="modelo" class="form-control">{{$articulo->modelo}}    
                         </textarea>
                     </div>
-            <div class="form-group">
-                        <label for="dimensiones" class="required">Dimensiones</label>
-                        <textarea name="dimensiones" value="{{$articulo->dimensiones}}"  rows="2.5" cols="20" name="dimensiones" class="form-control">{{$articulo->dimensiones}}    
-                        </textarea>
-                    </div>
+            
             <div class="form-group">
                         <label for="fabricante" class="required">Fabricante</label>
                         <textarea name="fabricante" value="{{$articulo->fabricante}}"  rows="2.5" cols="20" name="fabricante" class="form-control">{{$articulo->fabricante}}    
                         </textarea>
                     </div>
             <div class="form-group">
-                        <label for="tipoArticulo" class="required">Tipo de Articulo</label>
-                        <textarea name="tipoArticulo" value="{{$articulo->tipoArticulo}}"  rows="2.5" cols="20" name="tipoArticulo" class="form-control">{{$articulo->tipoArticulo}}    
+                        <label for="descripcion" class="required">Descripcion</label>
+                        <textarea name="descripcion" value="{{$articulo->descripcion}}"  rows="2.5" cols="20" name="descripcion" class="form-control">{{$articulo->descripcion}}    
                         </textarea>
                     </div>
-            <div class="form-group">
-                        <label for="montaje" class="required">Montaje</label>
-                        <textarea name="montaje" value="{{$articulo->montaje}}"  rows="2.5" cols="20" name="montaje" class="form-control">{{$articulo->montaje}}    
-                        </textarea>
-                    </div>
-            <div class="form-group">
-                <label for="numLineas">Numero de Lineas </label>
-                    <input type="number" name="numLineas" min="0" max="150" step="1" value="{{$articulo->numLineas}}">
-                </div>
+            
 
-             <div class="form-group">
-                        <label for="tipoLinea" class="required">Tipo de Linea</label>
-                        <textarea name="tipoLinea" value="{{$articulo->tipoLinea}}"  rows="2.5" cols="20" name="tipoLinea" class="form-control">{{$articulo->tipoLinea}}    
-                        </textarea>
-                    </div>
+             
              
 
     		<div class="form-group">

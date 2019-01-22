@@ -20,8 +20,9 @@
                         <th>Modelo</th>
                         <th>Fabricante</th>
                         <th>Cantidad</th>
-                        <th>Altura</th>
-                        <th>Dimensiones</th>
+                        <th>Descripcion</th>
+                        
+                        
                         <th>Opciones</th>
                     </thead>
                     @foreach ($articulo as $art)
@@ -31,8 +32,8 @@
                         <td>{{ $art->modelo}}</td>
                         <td>{{ $art->fabricante}}</td>
                         <td>{{ $art->cantidad}}</td>
-                        <td>{{ $art->altura}}</td>
-                        <td>{{ $art->dimensiones}}</td>
+                        <td>{{ $art->descripcion}}</td>
+                       
                         
                         <td>
                             <a href="{{URL::action('ArticuloController@edit', $art->idArticulo)}}"><button class="btn btn-info">Editar</button></a>

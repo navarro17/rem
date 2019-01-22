@@ -19,8 +19,8 @@
         
 
             <div class="form-group">
-                <label for="altura" class="required">Altura</label>
-                <input type="text" value="{{old('altura')}}" name="altura" class="form-control" placeholder="altura en metros...">    
+                <label for="tipoArticulo" class="required">Nombre</label>
+                <input type="text" value="{{old('tipoArticulo')}}" name="tipoArticulo" class="form-control" placeholder="Nombre del articulo...">    
             </div>
              <div class="form-group">
                 <label for="cantidad" class="required">Cantidad</label>
@@ -32,37 +32,20 @@
                 <textarea name="modelo" value="{{old('modelo')}}"  rows="2.5" cols="20" name="modelo" class="form-control" >    
                 </textarea>
             </div>
-            <div class="form-group">
-                <label for="dimensiones" class="required">Dimensiones</label>
-                <textarea name="dimensiones" value="{{old('dimensiones')}}"  rows="2.5" cols="20" name="dimensiones" class="form-control" >    
-                </textarea>
-            </div>
+           
             <div class="form-group">
                 <label for="fabricante" class="required">Fabricante</label>
                 <textarea name="fabricante" value="{{old('fabricante')}}"  rows="2.5" cols="20" name="fabricante" class="form-control" >   
                 </textarea>
             </div>
-             <div class="form-group">
-                <label for="tipoArticulo" class="required">Tipo de Articulo</label>
-                <textarea name="tipoArticulo" value="{{old('tipoArticulo')}}"  rows="2.5" cols="20" name="tipoArticulo" class="form-control" >   
-                </textarea>
-            </div>
+
             <div class="form-group">
-                <label for="montaje" class="required">Montaje</label>
-                <textarea name="montaje" value="{{old('montaje')}}"  rows="2.5" cols="20" name="montaje" class="form-control" >   
+                <label for="descripcion" class="required">Descripcion</label>
+                <textarea name="descripcion" value="{{old('descripcion')}}"  rows="2.5" cols="20" name="descripcion" class="form-control" >    
                 </textarea>
             </div>
-             <div class="form-group">
-                <label for="numeroLineas">Numero de Lineas</label>
-                
-                    <input type="number" name="numLineas" min="0" max="150" step="1" value="">
-                
-            </div>
-            <div class="form-group">
-                <label for="tipoLinea" class="required">Tipo de Linea</label>
-                <textarea name="tipoLinea" value="{{old('tipoLinea')}}"  rows="2.5" cols="20" name="tipoLinea" class="form-control" >   
-                </textarea>
-            </div>
+             
+            
 
             
 

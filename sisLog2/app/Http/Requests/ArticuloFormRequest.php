@@ -25,15 +25,15 @@ class ArticuloFormRequest extends Request
     {
         return [
             //
-            'altura' => 'required|max:100',
-            'cantidad'=>'required|max:100',
+            
+            'cantidad'=>'required|max:10',
             'modelo'=>'required|max:100',
-            'dimensiones'=>'required|max:100',
+            
             'fabricante'=>'required|max:100',
             'tipoArticulo'=>'required|max:100',
-            'montaje' =>'required|max:100',
-            'numLineas' =>'required|max:30',
-            'tipoLinea'=>'required|max:1000'
+            
+            'descripcion' =>'required|max:100'
+            
             
             
             
