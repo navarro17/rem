@@ -5,7 +5,6 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use sisLog2\Http\Requests;
 use sisLog2\Agenda;
-use sisLog2\Medico;
 use sisLog2\Paciente;
 use PDF;
 use Calendar;
@@ -27,7 +26,7 @@ class AgendaController extends Controller
     {
         if ($request)
         {
-            $medicos=Medico::all();
+            
             $query=trim($request->get('searchText'));
             $agendas=DB::table('agenda')->where('nombreEmpresa','LIKE','%'.$query.'%')
             ->orWhere('tipoServicio','LIKE','%'.$query.'%')
@@ -38,7 +37,7 @@ class AgendaController extends Controller
             
             $agendaC = Agenda::all();
             
-            return view('Rem.agenda.index', ["agendas"=>$agendas, "agendaC"=>$agendaC,"medicos"=>$medicos, "searchText"=>$query]);
+            return view('Rem.agenda.index', ["agendas"=>$agendas, "agendaC"=>$agendaC, "searchText"=>$query]);
         }  
 
     }
@@ -51,7 +50,7 @@ class AgendaController extends Controller
     public function create()
     {
         
-        $medicos = Medico::all();
+        
         $now=Carbon::now();
         return view("Rem.agenda.create")->with('now',$now);
     }
@@ -127,9 +126,9 @@ class AgendaController extends Controller
      */
     public function edit($id)
     {
-        $medicos = Medico::all();
         
-       return view("Rem.agenda.edit",["agenda"=>Agenda::findOrFail($id)],["medicos"=>$medicos]);
+        
+       return view("Rem.agenda.edit",["agenda"=>Agenda::findOrFail($id)]);
       
     
     }
