@@ -90,15 +90,16 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>Paciente</span>
+                <span>Survey</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{url('clinica/paciente')}}"><i class="fa fa-circle-o"></i> Expediente de Paciente</a></li>
+                <li><a href="{{url('Rem/Survey')}}"><i class="fa fa-circle-o"></i>Listado Survey</a></li>
                 <!--<li><a href="#"><i class="fa fa-circle-o"></i> Registro de Medico</a></li>-->
               </ul>
             </li>
-            <li class="treeview">
+            
+            <!--<li class="treeview">
               <a href="#">
                 <i class="fa fa-th"></i>
                 <span>Pago Consulta</span>
@@ -108,7 +109,8 @@
                 <li><a href="{{  url('clinica/pago') }} "><i class="fa fa-circle-o"></i> Pagos pendientes</a></li>
                 <li><a href=" {{ url('clinica/pago/show') }} "><i class="fa fa-circle-o"></i> Estadisticas</a></li>
               </ul>
-            </li>
+            </li> -->
+            
             <!--
             <li class="treeview">
               <a href="#">
