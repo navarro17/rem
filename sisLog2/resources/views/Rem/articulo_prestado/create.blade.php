@@ -2,7 +2,7 @@
 @section ('contenido')
    <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <h3>Agregar un nuevo Prestamo</h3>
+            <h3>Agregar un nuevo Articulo</h3>
             @if (count($errors)>0)
             <div class="alert alert-danger">
                 <ul>
@@ -13,59 +13,52 @@
             </div>
             @endif
 
-            {!!Form::open(array('url'=>'Rem/prestamo','method'=>'POST','autocomplete'=>'off'))!!}
+            {!!Form::open(array('url'=>'Rem/articulo_prestado','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
 
-        
-
-
-            <div class="form-group">
-            <label for="idTecnico">Tecnico</label>  
-            <select name ="idTecnico" id="input" class="form-control" value="{{old('idTecnico')}}">
-                <option value="">--Escoja el Tecnico--</option>>
-             @foreach($tecnicos as $tecnico)
-                <option value="{{$tecnico['idTecnico']}}"> {{$tecnico['nomtec']}}
+             <div class="form-group">
+            <label for="idPrestamo">Prestado a:</label>  
+            <select name ="idPrestamo" id="input" class="form-control" value="{{old('idPrestamo')}}">
+                <option value="">--Escoja el prestario--</option>>
+             @foreach($prestamos as $prestamo)
+                <option value="{{$prestamo['idPrestamo']}}"> {{$prestamo['nomtec']}}
                 </option>
              @endforeach 
              </select>
              </div>
-             
-
 
 
             <div class="form-group">
-               
-            <label for="idProyecto">Proyecto</label>  
-            <select name ="idProyecto" id="input" class="form-control" value="{{old('idProyecto')}}">
-                <option value="">--Escoja el Proyecto--</option>
-
-             @foreach($proyectos as $proyecto)
-                <option value="{{$proyecto['idProyecto']}}"> {{$proyecto['nombre']}}
+            <label for="idArticulo">Articulo</label>  
+            <select name ="idArticulo" id="input" class="form-control" value="{{old('idArticulo')}}">
+                <option value="">--Escoja el Articulo--</option>>
+             @foreach($articulos as $articulo)
+                <option value="{{$articulo['idArticulo']}}"> {{$articulo['tipoArticulo']}}
                 </option>
-             @endforeach
-             </select> 
-         </div>
+             @endforeach 
+             </select>
+             </div>
 
-         <div class="form-group">
-                <label for="fecha">Fecha del prestamo</label>
-                <input type="date" name="fecha" class="form-control" value="{{$now->format('d/m/Y')}}"> 
+        
 
+            <div class="form-group">
+                <label for="canArt" class="required">Cantidad</label>
+                <input type="text" value="{{old('cantArt')}}" name="cantArt" class="form-control" placeholder="digite la cantidad a prestar...">    
             </div>
+             
+            
 
             
 
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>
-
-                <a href="{{ url('/articulo_prestado/create') }}"><button class="btn btn-danger" type="submit">prueba</button></a>
-
                 <button class="btn btn-danger" type="reset">Cancelar</button>
             </div>
             {!!Form::close()!!}
               
         </div>
    </div>
-  <a href="{{URL::action('PrestamoController@index')}}"><button class="btn btn-info">Ver Listado de Prestamos</button></a>
+  <a href="{{URL::action('Articulo_prestadoController@index')}}"><button class="btn btn-info">Ver Listado de Articulos</button></a>
    
    
 @endsection

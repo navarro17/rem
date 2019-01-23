@@ -1,4 +1,4 @@
-<div class="modal fade modal-slide-in-rigth" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$art->idArticulo}}">
+<div class="modal fade modal-slide-in-rigth" aria-hidden="true" role="dialog" tabindex="-1" id="modal-delete-{{$pre->idPrestamo}}">
     {{Form::Open(array('action'=>array('PrestamoController@destroy',$pre->idPrestamo),'method'=>'delete'))}}
     <div class="modal-dialog">
         <div class="modal-content">
