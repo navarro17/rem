@@ -31,6 +31,7 @@ Route::group(['middleware' => 'usuarioAdmin'], function () {
 	
 	Route::resource('Rem/articulo','ArticuloController');
 	Route::resource('Rem/prestamo','PrestamoController');
+	Route::resource('Rem/articulo_prestado','Articulo_prestadoController');
 
     
 	//Route::resource('clinica','IndiceController');
