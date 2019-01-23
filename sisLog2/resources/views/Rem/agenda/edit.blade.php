@@ -26,7 +26,7 @@
                 <select name="tipoServicio" id="input" class="form-control" value="{{$agenda->tipoServicio }}">
                     <option value="">Seleccione el tipo de Servicio</option>
                     <option value="Mantenimiento de Antenas" <?php if($agenda->tipoServicio=="Mantenimiento de Antenas") echo "selected" ?>>Mantenimiento de Antenas</option>
-                    <option value="Medicion de Parametros" <?php if($agenda->tipoServicio=="Medicion de Parametros") echo "selected" ?>>Medicion de Parametros/option>
+                    <option value="Medicion de Parametros" <?php if($agenda->tipoServicio=="Medicion de Parametros") echo "selected" ?>>Medicion de Parametros</option>
                     <option value="Colocacion de Antena" <?php if($agenda->tipoServicio=="Colocacion de Antena") echo "selected" ?>>Colocacion de Antena</option>
                     <option value="Evaluacion de Equipos" <?php if($agenda->tipoServicio=="Evaluacion de Equipos") echo "selected" ?>>Evaluacion de Equipos</option>
                     <option value="Instalacion de Equipos" <?php if($agenda->tipoServicio=="Instalacion de Equipos") echo "selected" ?>>Instalacion de Equipos</option>
