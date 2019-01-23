@@ -4,7 +4,7 @@ namespace sisLog2\Http\Requests;
 
 use sisLog2\Http\Requests\Request;
 
-class Articulo_prestadoFormRequest extends Request
+class ProyectoFormRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,16 +25,11 @@ class Articulo_prestadoFormRequest extends Request
     {
         return [
             //
-
-            //'idArticulo'=>'max:10',
-
-            'idArticulo'=>'required|max:10',
-            'idPrestamo'=>'required|max:10',
-        
-             'canArt'=>'required|max:10'
-        
             
+            'nombre'=>'required|max:50',
+            'fecha'=>'required|max:100',
             
+            'fecha'=>'required|max:10'
             
             
             

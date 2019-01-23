@@ -2,7 +2,7 @@
 @section ('contenido')
    <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <h3>Agregar un nuevo Articulo</h3>
+            <h3>Agregar un nuevo Proyecto</h3>
             @if (count($errors)>0)
             <div class="alert alert-danger">
                 <ul>
@@ -13,44 +13,23 @@
             </div>
             @endif
 
-            {!!Form::open(array('url'=>'Rem/articulo_prestado','method'=>'POST','autocomplete'=>'off'))!!}
+            {!!Form::open(array('url'=>'Rem/proyecto','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
-
-
-            <div class="form-group">
-                <label for="idPrestamo" class="col-sm-3 required">Prestado a: </label>
-                
-                    <select name="idPrestamo" id="input" class="form-control" value="{{ old('idPrestamo') }}">
-                    <option value="">Seleccione el tecnico</option>
-                    <option value="1"> Mario </option>
-                    <option value="2"> Nelson</option>
-                    <option value="3">Giovanni</option>
-                    
-                </select>
-               
-            </div>  
-
-
-            <div class="form-group">
-            <label for="idArticulo">Articulo</label>  
-            <select name ="idArticulo" id="input" class="form-control" value="{{old('idArticulo')}}">
-                <option value="">--Escoja el Articulo--</option>>
-             @foreach($articulos as $articulo)
-                <option value="{{$articulo['idArticulo']}}"> {{$articulo['tipoArticulo']}}
-                </option>
-             @endforeach 
-             </select>
-             </div>
 
         
 
             <div class="form-group">
-                <label for="canArt" class="required">Cantidad</label>
-                <input type="text" value="{{old('canArt')}}" name="canArt" class="form-control" placeholder="digite la cantidad a prestar...">    
+                <label for="nombre" class="required">Nombre</label>
+                <input type="text" value="{{old('nombre')}}" name="nombre" class="form-control" placeholder="Nombre del Proyecto...">    
             </div>
-             
-            
 
+             <div class="form-group">
+                <label for="fecha">Fecha del prestamo</label>
+                <input type="date" name="fecha" class="form-control" value="{{$now->format('d/m/Y')}}"> 
+
+            </div>
+            
+  
             
 
             <div class="form-group">
@@ -61,7 +40,7 @@
               
         </div>
    </div>
-  <a href="{{URL::action('ArticuloController@index')}}"><button class="btn btn-info">Ver Listado de Articulos</button></a>
+  <a href="{{URL::action('ProyectoController@index')}}"><button class="btn btn-info">Ver Listado de Proyectos</button></a>
    
    
 @endsection

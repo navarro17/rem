@@ -38,24 +38,20 @@ class Articulo_prestadoController extends Controller
 
     public function create()
     {
-        $prestamos=Prestamo::all();
+        
+        //$prestamo=Prestamo();
         $articulos=Articulo::all();
         
         $now=Carbon::now();
 
     	return 
-    	view("Rem.articulo_prestado.create",["prestamos"=>$prestamos],["articulos"=>$articulos])->with('now',$now);
+    	view("Rem.articulo_prestado.create",["articulos"=>$articulos])->with('now',$now);
     }
 
-    public function store(PrestamoFormRequest $request)
+    public function store(Articulo_prestadoFormRequest $request)
     {
     	$articulo_prestado = new Articulo_prestado;
 
-// AQUI LO HE TOCADO
-         
-        
-
-        
 
         $articulo_prestado->idArticulo=$request->get('idArticulo');
         $articulo_prestado->idPrestamo=$request->get('idPrestamo');
@@ -83,6 +79,9 @@ class Articulo_prestadoController extends Controller
         return $pdf->stream($articulo_prestado->idArtPre);
         
     }
+
+
+
 
 
 
