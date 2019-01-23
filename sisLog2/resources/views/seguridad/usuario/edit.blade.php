@@ -73,8 +73,8 @@
                              
                                <select id="idtipo" name="idtipo" class="form-control">
                                     <option value="">Seleccione el tipo de Usuario</option>    
-                                    <option value="1 " <?php if($usuario->tipoUsuario=="1 ") echo "selected" ?>>Administrador</option>
-                                    <option value="2 " <?php if($usuario->tipoUsuario=="2 ") echo "selected" ?>>Doctor</option>
+                                    <option value="1 " <?php if($usuario->tipoUsuario=="1 ") echo "selected" ?>>Tecnico</option>
+                                    <option value="2 " <?php if($usuario->tipoUsuario=="2 ") echo "selected" ?>>Bodeguero</option>
                                 </select>                        
                     
                         </div>
