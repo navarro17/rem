@@ -9,7 +9,7 @@ use sisLog2\Tecnico;
 use sisLog2\Proyecto;
 use sisLog2\Articulo;
 use Illuminate\Support\Facades\Redirect;
-use sisLog2\Http\Requests\ArticuloFormRequest;
+use sisLog2\Http\Requests\PrestamoFormRequest;
 use DB;
 
 class PrestamoController extends Controller
@@ -27,7 +27,7 @@ class PrestamoController extends Controller
             $query=trim($request->get('searchText'));
             $prestamo=DB::table('prestamo')->join('proyecto','proyecto.idProyecto','=','prestamo.idProyecto')
             ->join('tecnico','tecnico.idTecnico','=','prestamo.idTecnico')
-            ->join('articulo','articulo.idArticulo','=','prestamo.idArticulo')
+            //->join('articulo','articulo.idArticulo','=','prestamo.idArticulo')
             ->Where('tecnico.nomtec','LIKE','%'.$query.'%')
             ->orWhere('tecnico.apellido','LIKE','%'.$query.'%')
             ->orWhere('proyecto.nombre','LIKE','%'.$query.'%')
@@ -39,21 +39,21 @@ class PrestamoController extends Controller
 
     public function create()
     {
-    	
-        
-
+        $tecnicos=Tecnico::all();
+        $proyectos=Proyecto::all();
+        $pre = new Prestamo;
         $now=Carbon::now();
+
     	return 
-    	view("Rem.prestamo.create")->with('now',$now);
+    	view("Rem.prestamo.create",["tecnicos"=>$tecnicos],["proyectos"=>$proyectos],["pre"=>$pre])->with('now',$now);
     }
 
-    public function store(prestamoFormRequest $request)
+    public function store(PrestamoFormRequest $request)
     {
     	$prestamo = new Prestamo;
     	
         $prestamo->idArticulo=$request->get('idArticulo');
         $prestamo->idProyecto=$request->get('idProyecto');
-        
         $prestamo->idTecnico=$request->get('idTecnico');
         $prestamo->fecha=$request->get('fecha');
         
